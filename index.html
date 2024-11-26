@@ -1,7 +1,14 @@
 <!-- DEVELOPER: Bryan Madewell, IS117-003, Fall 2024 -->
+
+
+
+<!-- Most code comments will be on this index.html file, but I have also copy/pasted the comments to other .html files as well. -->
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Included functionality for mobile device, set default scale -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bryan's Resume</title>
@@ -9,6 +16,8 @@
     <link rel="stylesheet" href="styles/index.css">
 </head>
 <body>
+    <!-- Detailed navbar, ensuring use for desktop and mobile devices. Includes core bootstrap functions
+    Such as ms-auto, navbar-collapse, among many others to ensure full functionality on any device. -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
             <a class="navbar-brand" href="index.html">Bryan's Resume</a>
@@ -28,6 +37,7 @@
                             Projects
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="projectsDropdown">
+                        <!-- Had to make adjustments to ensure the absolute path is used for github pages (something funky was going on prior)-->
                             <li><a class="dropdown-item" href="/P4/interior/project1.html">Project 1: Antivirus Software</a></li>
                             <li><a class="dropdown-item" href="/P4/interior/project2.html">Project 2: Java Chatroom</a></li>
                         </ul>
@@ -47,16 +57,18 @@
                 <p class="lead">Showcasing my projects, skills, experience, and education.</p>
             </div>
         </header>
-
-        <section class="py-5">
-            <div class="container">
-                <div class="row g-4">
-                    <div class="col-md-6 col-lg-4">
+        <!-- Using bootstrap predefined classes, I was able to set a theme, padding, and color scheme for each of the cards to 
+        Keep everything very simple and consistent among the cards. 
+        All cards have the same format, different text, so I will explain this one in depth, as they are all the same. -->
+        <section class="py-5"> <!-- Vertical Padding for Cards-->
+            <div class="container"> <!-- Helps format content -->
+                <div class="row g-4"> <!-- Spacing for grid of cards -->
+                    <div class="col-md-6 col-lg-4"> <!-- Specifies column dimensions on different device sizes (mobile and desktop) -->
                         <div class="card">
-                            <div class="card-body">
+                            <div class="card-body"> <!-- Main text of the card (title, body) -->
                                 <h5 class="card-title">About Me</h5>
                                 <p class="card-text">Learn more about me, my education, and experience.</p>
-                                <a href="interior/about.html" class="btn btn-primary">Learn More</a>
+                                <a href="interior/about.html" class="btn btn-primary">Learn More</a> <!-- Button to About Me webpage -->
                             </div>
                         </div>
                     </div>
